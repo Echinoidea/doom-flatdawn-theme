@@ -1,4 +1,3 @@
-
 ;;; doom-flatdawn-theme.el --- inspired by Atom's Flatwhite Syntax theme with Rose Pine Dawn colors -*- lexical-binding: t; no-byte-compile: t; -*-
 ;;
 ;; Modified from original doom-flatwhite-theme.el
@@ -264,9 +263,8 @@ determine the exact padding."
                     :distant-foreground nil
                     :extend t)
 
-   (vertico-group-title :background rp-rose
-                        :box rp-rose
-                        :distant-foreground rp-rose
+   (vertico-group-title :background fd-blue-blend
+                        :distant-foreground nil
                         :extend t)
 
 
