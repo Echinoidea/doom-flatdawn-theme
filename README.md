@@ -1,4 +1,4 @@
-# Document Title
+# Flatdawn
 
 Adaptation of the flatwhite theme using RosePine Dawn colors for Doom Emacs.
 
