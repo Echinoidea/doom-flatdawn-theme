@@ -402,6 +402,10 @@ determine the exact padding."
    (lsp-face-highlight-read    :background (doom-blend red bg 0.3))
    (lsp-face-highlight-textual :inherit 'lsp-face-highlight-read)
    (lsp-face-highlight-write   :inherit 'lsp-face-highlight-read)
+
+   ;;;; nav-flash
+   (nav-flash-face :background rp-rose :foreground rp-base )
+
    ;;;; magit
    (magit-bisect-bad        :background fd-red-blend
                             :foreground fd-red-text)
