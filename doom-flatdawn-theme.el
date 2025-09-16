@@ -1,10 +1,10 @@
+
 ;;; doom-flatdawn-theme.el --- inspired by Atom's Flatwhite Syntax theme with Rose Pine Dawn colors -*- lexical-binding: t; no-byte-compile: t; -*-
 ;;
 ;; Modified from original doom-flatwhite-theme.el
 ;; Author: JuneKelly <https://github.com/JuneKelly>
 ;; Maintainer: Echinoidea <https://github.com/Echinoidea>
 ;; Source: https://github.com/biletskyy/flatwhite-syntax
-;; Colors: Rose Pine Dawn palette
 ;;
 ;;; Commentary:
 ;;; Code:
@@ -92,7 +92,7 @@ determine the exact padding."
    (fd-teal-text       rp-text)
    (fd-teal-text-sec   rp-subtle)
    (fd-teal            rp-foam)
-   (fd-teal-blend      (doom-lighten rp-foam 0.7))
+   (fd-teal-blend      (doom-lighten rp-foam 0.8))
 
    (fd-blue-text       rp-text)
    (fd-blue-text-sec   rp-subtle)
@@ -104,8 +104,8 @@ determine the exact padding."
    (fd-purple          rp-iris)
    (fd-purple-blend    (doom-lighten rp-iris 0.7))
 
-   (bg         `(,(car rp-base) nil       nil            ))
-   (bg-alt     `(,(car rp-surface) nil       nil            ))
+   (bg         `(,(car fd-base6) nil       nil            ))
+   (bg-alt     `(,(car fd-base7) nil       nil            ))
    (base0      rp-surface)
    (base1      rp-highlight-low)
    (base2      rp-overlay)
@@ -193,12 +193,13 @@ determine the exact padding."
    (font-lock-preprocessor-char-face    :inherit 'default)
    (font-lock-regexp-grouping-backslash :inherit 'default)
    (font-lock-regexp-grouping-construct :inherit 'default)
-   (font-lock-constant-face             :background fd-teal-blend
-                                        :foreground fd-teal-text)
+   (font-lock-constant-face             :background fd-orange-blend
+                                        :foreground fd-orange-text)
    (font-lock-function-name-face        :foreground fg
                                         :weight 'semi-bold)
-   ;; (font-lock-keyword-face              :background fd-purple-blend
-   ;;                                      :foreground fd-purple-text)
+
+   (font-lock-keyword-face              :background fd-purple-blend
+                                        :foreground fd-purple-text)
    (font-lock-string-face               :background fd-green-blend
                                         :foreground fd-green-text )
 
@@ -257,6 +258,25 @@ determine the exact padding."
                                    :background fd-teal-blend
                                    :foreground fd-teal-text-sec
                                    :weight 'bold)
+   ;;;; verticco
+   (vertico-current :background fd-purple-blend
+                    :box nil
+                    :distant-foreground nil
+                    :extend t)
+
+   (vertico-group-title :background rp-rose
+                        :box rp-rose
+                        :distant-foreground rp-rose
+                        :extend t)
+
+
+   (vertico-posframe :background fd-base7
+                     :distant-foreground nil
+                     :extend t)
+
+   (vertico-posframe-border :background rp-iris; or whatever color you prefer
+                            :foreground rp-iris)
+
    ;;;; company
    (company-tooltip            :inherit 'tooltip)
    (company-tooltip-annotation            :foreground fd-purple-text-sec )
@@ -622,6 +642,8 @@ determine the exact padding."
 
   ;;;; Base theme variable overrides-
   ()
+
+
   )
 
 ;;; doom-flatdawn-theme.el ends here
