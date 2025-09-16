@@ -630,6 +630,9 @@ determine the exact padding."
    (web-mode-symbol-face            :foreground fd-blue-text
                                     :background fd-blue-blend)
    (web-mode-string-face            :inherit 'font-lock-string-face)
+
+   (web-mode-variable-name-face            :foreground fd-red-text
+                                           :background fd-red-blend)
    ;;;; wgrep <built-in>
    (wgrep-face :background base1)
    ;;;; which-key
